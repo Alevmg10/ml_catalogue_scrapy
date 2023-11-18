@@ -25,6 +25,7 @@ class MlspiderSpider(scrapy.Spider):
         articulo_detalles['url'] = response.url
         articulo_detalles['titulo'] = response.css('h1.ui-pdp-title ::text').get()
         articulo_detalles['calidad'] = response.css('div.ui-pdp-header__subtitle span ::text').get()
+        articulo_detalles['ciudad'] = response.css('div.ui-pdp-media__body .ui-pdp-media__text ::text').get()
         articulo_detalles['precio_usd'] = response.css('span.andes-money-amount meta ::attr(content)').get()
         articulo_detalles['precio_bs'] = response.css('div.ui-pdp-price__subtitles .andes-money-amount__fraction ::text').get()
         articulo_detalles['vendedor'] = response.css('div.ui-pdp-seller div.ui-pdp-seller__header__info-container a span ::text').get()

@@ -12,6 +12,7 @@ class MlScraperItem(scrapy.Item):
     url = scrapy.Field()
     titulo = scrapy.Field()
     calidad = scrapy.Field()
+    ciudad = scrapy.Field()
     precio_usd = scrapy.Field()
     precio_bs = scrapy.Field()
     vendedor = scrapy.Field()
